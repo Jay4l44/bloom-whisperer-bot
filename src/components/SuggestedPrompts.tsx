@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import { Sparkles } from "lucide-react";
+import { Flower } from "lucide-react";
 
 interface SuggestedPromptsProps {
   onSelectPrompt: (prompt: string) => void;
@@ -16,7 +16,7 @@ export const SuggestedPrompts = ({ onSelectPrompt }: SuggestedPromptsProps) => {
   return (
     <div className="space-y-3 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div className="flex items-center gap-2 text-sm text-muted-foreground">
-        <Sparkles className="h-4 w-4" />
+        <Flower className="h-4 w-4" />
         <span>Try asking about:</span>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">

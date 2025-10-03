@@ -91,7 +91,7 @@ const Index = () => {
       >
         <div className="p-4 border-b border-border">
           <h2 className="font-semibold text-lg text-foreground">BloomSphere</h2>
-          <p className="text-xs text-muted-foreground mt-1">Learn about Egyptian plants</p>
+          <p className="text-xs text-muted-foreground mt-1">Learn about plants worldwide</p>
         </div>
         <ScrollArea className="h-[calc(100vh-80px)] p-4">
           <div className="space-y-2">

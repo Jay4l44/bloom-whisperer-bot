@@ -14,13 +14,11 @@ export const ChatBubble = ({ message, isUser, timestamp }: ChatBubbleProps) => {
       isUser ? "flex-row-reverse" : "flex-row"
     )}>
       {!isUser && (
-        <div className="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden bg-card border-2 border-primary/20">
-          <img 
-            src={bloomBotCharacter} 
-            alt="BloomBot" 
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <img 
+          src={bloomBotCharacter} 
+          alt="BloomBot" 
+          className="flex-shrink-0 w-10 h-10 object-contain"
+        />
       )}
       
       <div className={cn(

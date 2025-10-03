@@ -7,7 +7,7 @@ const corsHeaders = {
 };
 
 const PLANT_DATA = `
-BloomSphere is an educational platform about Egyptian plants and flora. Here's our plant database:
+BloomSphere is an educational platform about plants and flora from around the world. Here's our plant database:
 
 1. Jasmine (ياسمين) - Jasminum officinale - White star-shaped flowers, blooms April-June in Nile Delta
 2. Aloe Vera (صبار) - Aloe vera - Fleshy green leaves, blooms June-August in Sinai
@@ -63,7 +63,7 @@ serve(async (req) => {
         messages: [
           {
             role: 'system',
-            content: `You are BloomBot, a friendly and knowledgeable assistant for BloomSphere, an educational platform about Egyptian plants and flora. 
+            content: `You are BloomBot, a friendly and knowledgeable assistant for BloomSphere, an educational platform about plants and flora from around the world. 
 
 Your personality:
 - Warm, friendly, and encouraging
@@ -76,7 +76,7 @@ Your knowledge base:
 ${PLANT_DATA}
 
 Your capabilities:
-- Answer questions about Egyptian plants
+- Answer questions about plants from all regions worldwide
 - Provide care instructions
 - Help identify plants based on descriptions
 - Teach about blooming seasons and regions

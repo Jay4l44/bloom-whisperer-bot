@@ -22,13 +22,11 @@ export const ChatHeader = ({ onMenuToggle, isMenuOpen }: ChatHeaderProps) => {
           </Button>
           
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full overflow-hidden bg-background border-2 border-primary/20">
-              <img 
-                src={bloomBotCharacter} 
-                alt="BloomBot" 
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <img 
+              src={bloomBotCharacter} 
+              alt="BloomBot" 
+              className="w-10 h-10 object-contain"
+            />
             <div>
               <h1 className="font-semibold text-foreground">BloomBot</h1>
               <p className="text-xs text-muted-foreground">Your plant learning companion</p>
