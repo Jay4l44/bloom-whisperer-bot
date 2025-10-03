@@ -1,0 +1,4 @@
+project_id = "hqitxewakaqmgehqibfv"
+
+[functions.bloombot-chat]
+verify_jwt = false
