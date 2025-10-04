@@ -10,7 +10,7 @@ export const WelcomeMessage = () => {
       />
       
       <div className="space-y-2 max-w-md">
-        <h2 className="text-3xl font-bold text-foreground">
+        <h2 className="text-3xl font-bold text-foreground" style={{ color: 'hsl(25, 40%, 25%)' }}>
           What's on your mind?
         </h2>
       </div>

@@ -31,7 +31,12 @@ export const ChatBubble = ({ message, isUser, timestamp }: ChatBubbleProps) => {
             ? "bg-primary text-primary-foreground rounded-tr-sm" 
             : "bg-card text-card-foreground rounded-tl-sm border border-border"
         )}>
-          <p className="text-sm leading-relaxed whitespace-pre-wrap">{message}</p>
+          <div 
+            className="text-sm leading-relaxed whitespace-pre-wrap font-medium"
+            dangerouslySetInnerHTML={{ 
+              __html: message.replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold">$1</strong>') 
+            }}
+          />
         </div>
         
         {timestamp && (
