@@ -81,36 +81,33 @@ const Index = () => {
   };
 
   return (
-    <div className="flex h-screen bg-background">
-      {/* Main chat area */}
-      <main className="flex-1 flex flex-col h-screen">
-        <ChatHeader />
+    <div className="flex flex-col h-screen w-full bg-background">
+      <ChatHeader />
 
-        <ScrollArea className="flex-1 px-4 py-6">
-          <div className="max-w-3xl mx-auto">
-            {messages.length === 0 ? (
-              <div className="space-y-8">
-                <WelcomeMessage />
-                <SuggestedPrompts onSelectPrompt={handleSendMessage} />
-              </div>
-            ) : (
-              <div className="space-y-4">
-                {messages.map((message) => (
-                  <ChatBubble
-                    key={message.id}
-                    message={message.content}
-                    isUser={message.isUser}
-                    timestamp={message.timestamp}
-                  />
-                ))}
-              </div>
-            )}
-            <div ref={scrollRef} />
-          </div>
-        </ScrollArea>
+      <ScrollArea className="flex-1 px-4 py-6">
+        <div className="max-w-3xl mx-auto">
+          {messages.length === 0 ? (
+            <div className="space-y-8">
+              <WelcomeMessage />
+              <SuggestedPrompts onSelectPrompt={handleSendMessage} />
+            </div>
+          ) : (
+            <div className="space-y-4">
+              {messages.map((message) => (
+                <ChatBubble
+                  key={message.id}
+                  message={message.content}
+                  isUser={message.isUser}
+                  timestamp={message.timestamp}
+                />
+              ))}
+            </div>
+          )}
+          <div ref={scrollRef} />
+        </div>
+      </ScrollArea>
 
-        <ChatInput onSendMessage={handleSendMessage} isLoading={isLoading} />
-      </main>
+      <ChatInput onSendMessage={handleSendMessage} isLoading={isLoading} />
     </div>
   );
 };
