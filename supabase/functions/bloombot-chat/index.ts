@@ -83,7 +83,9 @@ Your capabilities:
 - Share interesting facts about plants
 - Offer one-on-one educational support
 
-Always be helpful and encouraging. If you don't know something specific, be honest but guide the user to related information you do know.`
+IMPORTANT: If asked about a topic, plant, or subject that is NOT in your knowledge base above, respond ONLY with: "I am still learning about this topic and I can't offer any false and misleading information."
+
+Always be helpful and encouraging for topics within your knowledge base.`
           },
           {
             role: 'user',

@@ -24,7 +24,7 @@ export const SuggestedPrompts = ({ onSelectPrompt }: SuggestedPromptsProps) => {
           <Button
             key={index}
             variant="outline"
-            className="justify-start text-left h-auto py-3 px-4 bg-primary hover:bg-primary/90 border-primary text-primary-foreground transition-all shadow-sm"
+            className="justify-start text-left h-auto py-3 px-4 bg-background hover:bg-primary border border-primary text-primary hover:text-primary-foreground transition-all shadow-sm"
             onClick={() => onSelectPrompt(prompt)}
           >
             {prompt}
