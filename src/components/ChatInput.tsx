@@ -33,7 +33,7 @@ export const ChatInput = ({ onSendMessage, isLoading }: ChatInputProps) => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Ask about Egyptian plants..."
+          placeholder="Ask about..."
           className="min-h-[60px] max-h-[120px] resize-none bg-background border-border focus:border-primary transition-colors"
           disabled={isLoading}
         />

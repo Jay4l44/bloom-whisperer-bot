@@ -118,7 +118,11 @@ const Index = () => {
 
       {/* Main chat area */}
       <main className="flex-1 flex flex-col h-screen">
-        <ChatHeader onMenuToggle={() => setIsMenuOpen(!isMenuOpen)} isMenuOpen={isMenuOpen} />
+        <ChatHeader 
+          onMenuToggle={() => setIsMenuOpen(!isMenuOpen)} 
+          onMenuClose={() => setIsMenuOpen(false)}
+          isMenuOpen={isMenuOpen} 
+        />
 
         <ScrollArea className="flex-1 px-4 py-6">
           <div className="max-w-3xl mx-auto">
