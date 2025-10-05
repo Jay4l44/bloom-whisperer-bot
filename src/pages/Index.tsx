@@ -18,7 +18,6 @@ interface Message {
 const Index = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { toast } = useToast();
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -83,46 +82,9 @@ const Index = () => {
 
   return (
     <div className="flex h-screen bg-background">
-      {/* Sidebar - Hidden on mobile by default */}
-      <aside
-        className={`${
-          isMenuOpen ? 'translate-x-0' : '-translate-x-full'
-        } fixed lg:relative lg:translate-x-0 z-40 w-64 bg-card border-r border-border transition-transform duration-300 ease-in-out h-full`}
-      >
-        <div className="p-4 border-b border-border">
-          <h2 className="font-semibold text-lg text-foreground">BloomSphere</h2>
-          <p className="text-xs text-muted-foreground mt-1">Learn about plants worldwide</p>
-        </div>
-        <ScrollArea className="h-[calc(100vh-80px)] p-4">
-          <div className="space-y-2">
-            <div className="text-sm text-muted-foreground">
-              <p className="mb-2">Quick tips:</p>
-              <ul className="space-y-1 text-xs">
-                <li>• Ask about specific plants</li>
-                <li>• Learn about bloom seasons</li>
-                <li>• Get care instructions</li>
-                <li>• Discover regional flora</li>
-              </ul>
-            </div>
-          </div>
-        </ScrollArea>
-      </aside>
-
-      {/* Overlay for mobile */}
-      {isMenuOpen && (
-        <div
-          className="fixed inset-0 bg-black/50 z-30 lg:hidden"
-          onClick={() => setIsMenuOpen(false)}
-        />
-      )}
-
       {/* Main chat area */}
       <main className="flex-1 flex flex-col h-screen">
-        <ChatHeader 
-          onMenuToggle={() => setIsMenuOpen(!isMenuOpen)} 
-          onMenuClose={() => setIsMenuOpen(false)}
-          isMenuOpen={isMenuOpen} 
-        />
+        <ChatHeader />
 
         <ScrollArea className="flex-1 px-4 py-6">
           <div className="max-w-3xl mx-auto">
